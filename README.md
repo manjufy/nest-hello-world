@@ -60,6 +60,17 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Whats in the Demo
+
+```
+GET http://localhost:3000/
+GET http://localhost:3000/ping
+GET http://localhost:3000/docs -> Redirection example
+
+GET http://localhost:3000/cats
+POST http://localhost:3000/cats
+```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
