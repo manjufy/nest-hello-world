@@ -3,7 +3,3 @@ export class CreateCatDto {
     age: number;
     breed: string;
 }
-
-export class ListAllEntities {
-    limit: number;
-}

@@ -1,16 +1,20 @@
 import { Controller, Get, Post, Header, Body, Query } from '@nestjs/common';
-import { CreateCatDto, ListAllEntities } from './dto';
+import { CreateCatDto } from './dto/create-cat.dto';
+import { CatsService } from './cats.service';
+import { Cat } from './interfaces/cat.interface';
 
 @Controller('cats')
 export class CatsController {
+    constructor(private catsService: CatsService) {}
+
     @Post()
     @Header('Cache-Control', 'none')
     async create(@Body() createCatDto: CreateCatDto) {
-        return [];
+        this.catsService.create(createCatDto);
     }
 
     @Get()
-    findAll(@Query() query: ListAllEntities) {
-        return `This action returns all cats (limit: ${query.limit})`;
+    async findAll(): Promise<Cat[]> {
+        return this.catsService.findAll();
     }
 }
