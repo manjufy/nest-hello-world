@@ -67,8 +67,8 @@ GET http://localhost:3000/
 GET http://localhost:3000/ping
 GET http://localhost:3000/docs -> Redirection example
 
-GET http://localhost:3000/cats
-POST http://localhost:3000/cats
+GET http://localhost:3000/items
+POST http://localhost:3000/items
 ```
 
 ## Support
