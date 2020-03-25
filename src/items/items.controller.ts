@@ -4,7 +4,7 @@ import { ItemsService } from './items.service';
 import { Item } from './interfaces/item.interface';
 
 @Controller('items')
-export class CatsController {
+export class ItemsController {
     constructor(private itemsService: ItemsService) {}
 
     @Post()
