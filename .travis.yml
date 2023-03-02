@@ -1,6 +1,4 @@
-language: node_js
-node_js:
-  - "lts/*"
+dist: focal
 # command to install dependencies
 before_install:
   - nvm install 16.13.2
