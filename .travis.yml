@@ -3,8 +3,9 @@ node_js:
   - "lts/*"
 # command to install dependencies
 install:
-  - npm install
-  - npm update
+  - nvm install 16.13.2
 # command to run tests
 script:
   - npm run test
+
+
