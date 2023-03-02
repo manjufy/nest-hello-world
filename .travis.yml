@@ -4,6 +4,7 @@ node_js:
 # command to install dependencies
 install:
   - npm install
+  - npm update
 # command to run tests
 script:
   - npm run test
