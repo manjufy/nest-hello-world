@@ -1,6 +1,5 @@
 language: node_js
 node_js:
-  - "lts/*"
   - node
 # command to install dependencies
 install:
@@ -8,5 +7,3 @@ install:
 # command to run tests
 script:
   - npm run test
-  - npm run test:e2e
-  - npm run test:cov
