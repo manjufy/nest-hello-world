@@ -1,9 +1,22 @@
-dist: focal
-# command to install dependencies
-before_install:
-  - nvm install 16.13.2
-# command to run tests
+languaje: node_js
+node_js:
+  - '16.13.2'
+cache:
+  npm: false
+deploy:
+  - provider: script
+    script: bash scripts/travis-dev.sh
+    on:
+      branch:
+        - develop
+    skip_cleanup: true
 script:
+  - npm install
+  - npm run prettier:check
+  - npm run lint
+  - npx prisma generate
+  - npm run build
   - npm run test
-
-
+before_install:
+  - pip install awscli
+  - export PATH=$PATH:$HOME/.local/bin
